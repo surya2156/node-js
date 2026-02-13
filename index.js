@@ -31,13 +31,24 @@
 //   }
 // });
 
-//copy one file data into another file
-const fs = require('fs');
+//copy one file data into another file 
+//asyn function
+// const fs = require('fs');
 
-fs.cp("./a.txt", "./b.txt", (err) => {
+// fs.cp("./a.txt", "./b.txt", (err) => {
+//   if (err) {
+//     console.log("Error:", err);
+//   } else {
+//     console.log("File copied successfully");
+//   }
+// });
+
+//delete file
+const fs = require('fs');
+fs.unlink("./a.txt", (err) => {
   if (err) {
     console.log("Error:", err);
   } else {
-    console.log("File copied successfully");
+    console.log("File deleted successfully");
   }
 });
