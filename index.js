@@ -21,12 +21,23 @@
 //   }
 // });
 
+// const fs = require('fs');
+
+// fs.appendFile("./a.txt", "This is additional content.", (err) => {
+//   if (err) {
+//     console.log("Error:", err);
+//   } else {
+//     console.log("Content appended successfully");
+//   }
+// });
+
+//copy one file data into another file
 const fs = require('fs');
 
-fs.appendFile("./a.txt", "This is additional content.", (err) => {
+fs.cp("./a.txt", "./b.txt", (err) => {
   if (err) {
     console.log("Error:", err);
   } else {
-    console.log("Content appended successfully");
+    console.log("File copied successfully");
   }
 });
