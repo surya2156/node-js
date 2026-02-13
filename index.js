@@ -43,12 +43,44 @@
 //   }
 // });
 
+
+
 //delete file
-const fs = require('fs');
-fs.unlink("./a.txt", (err) => {
-  if (err) {
-    console.log("Error:", err);
-  } else {
-    console.log("File deleted successfully");
-  }
+// const fs = require('fs');
+// fs.unlink("./a.txt", (err) => {
+//   if (err) {
+//     console.log("Error:", err);
+//   } else {
+//     console.log("File deleted successfully");
+//   }
+// });
+const express = require("express");
+const cors = require("cors");
+
+const app = express();
+
+// Enable CORS
+app.use(cors());
+
+// Parse JSON
+app.use(express.json());
+
+let storedData = "";
+
+// Write API
+app.post("/write", (req, res) => {
+  storedData = req.body.text;
+  res.json({ message: "Data saved successfully" });
 });
+
+// Read API
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully 🚀");
+});
+
+
+// Start server
+app.listen(5001, () => {
+  console.log("Server running on http://127.0.0.1:5001");
+});
+
