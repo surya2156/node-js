@@ -9,14 +9,24 @@
   //}
 //})
 
+//asyn function
 
+// const fs = require('fs');
+
+// fs.writeFile("./a.txt", "abes college is hhah", (err) => {
+//   if (err) {
+//     console.log("Error:", err);
+//   } else {
+//     console.log("File written successfully");
+//   }
+// });
 
 const fs = require('fs');
 
-fs.writeFile("./a.txt", "abes college is hhah", (err) => {
+fs.appendFile("./a.txt", "This is additional content.", (err) => {
   if (err) {
     console.log("Error:", err);
   } else {
-    console.log("File written successfully");
+    console.log("Content appended successfully");
   }
 });
