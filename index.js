@@ -54,33 +54,41 @@
 //     console.log("File deleted successfully");
 //   }
 // });
-const express = require("express");
-const cors = require("cors");
+// const express = require("express");
+// const cors = require("cors");
 
-const app = express();
+// const app = express();
 
-// Enable CORS
-app.use(cors());
+// app.use(cors());
+// app.use(express.json());
 
-// Parse JSON
-app.use(express.json());
+// let storedData = "";
 
-let storedData = "";
+// // Write API
+// app.post("/write", (req, res) => {
+//   storedData = req.body.text;
+//   res.json({ message: "Data saved successfully" });
+// });
 
-// Write API
-app.post("/write", (req, res) => {
-  storedData = req.body.text;
-  res.json({ message: "Data saved successfully" });
-});
+// // Read API (ADD THIS)
+// app.get("/read", (req, res) => {
+//   res.json({ text: storedData });
+// });
 
-// Read API
-app.get("/", (req, res) => {
-  res.send("Backend is running successfully 🚀");
-});
+// // Home route
+// app.get("/", (req, res) => {
+//   res.send("Backend is running successfully 🚀");
+// });
 
+// app.listen(5001, () => {
+//   console.log("Server running on http://127.0.0.1:5001");
+// });
 
-// Start server
-app.listen(5001, () => {
-  console.log("Server running on http://127.0.0.1:5001");
-});
+// os
+const os= require('os');
+console.log("platform", os.platform());
 
+console.log("userinfo", os.userInfo());
+console.log("CPU", os.arch());
+console.log("free memory", os.freemem());
+console.log("total memory", os.totalmem());g
