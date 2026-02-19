@@ -1,0 +1,12 @@
+{
+  "freeMemory": "1234.56 MB",
+  "totalMemory": "16384.00 MB",
+  "cpuArchitecture": "arm64",
+  "userInfo": {
+    "uid": 501,
+    "username": "surya",
+    "homedir": "/Users/surya",
+    "shell": "/bin/zsh"
+  }
+}
+

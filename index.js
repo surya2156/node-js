@@ -84,11 +84,24 @@
 //   console.log("Server running on http://127.0.0.1:5001");
 // });
 
-// os
-const os= require('os');
-console.log("platform", os.platform());
+// Operating system module
+// const os= require('os');
+// console.log("platform", os.platform());
 
-console.log("userinfo", os.userInfo());
-console.log("CPU", os.arch());
-console.log("free memory", os.freemem());
-console.log("total memory", os.totalmem());g
+// console.log("userinfo", os.userInfo());
+// console.log("CPU", os.arch());
+// console.log("free memory", os.freemem());
+// console.log("total memory", os.totalmem());
+// console.log("uptime", os.uptime());
+// console.log("home dir", os.homedir());
+// console.log("hostname", os.hostname());
+
+const http = require('http');
+const fs = require('fs');
+const home=fs.readFileSync("./a.html");
+const myServer=http.createServer((req, res) => {
+  res.writeHead(200, {"Content-Type": "text/html"});
+res.write(home);
+  res.end();
+});
+myServer.listen(8000,()=> console.log("server is running on "));
