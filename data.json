@@ -1,6 +1,4 @@
-{
-    "name": "node-test"
-    "class": "test",
-    
-
-}
+[
+  { "id": 1, "name": "Surya" },
+  { "id": 2, "name": "Rahul" }
+]
